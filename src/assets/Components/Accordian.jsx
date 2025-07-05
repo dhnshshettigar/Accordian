@@ -4,12 +4,19 @@ import React, { useState } from 'react'
 
 const Accordian = () => {
     const [selected, setSelected] = useState(null)
+    const [multiSelected, setMultiSelected] = useState(false)
     const handleShow = (getCurrentId) => {
         setSelected(selected === getCurrentId ? null : getCurrentId)
+        setMultiSelected(null)
     }
     return (
         <div className='Wrapper'>
-            <button>Show All</button>
+            <button onClick={
+                ()=>{
+                    setMultiSelected(!multiSelected)
+                    setSelected(null)
+                }
+            } >Show All</button>
             <div className='accordian'>
                 
                 <div className='item'>
@@ -20,6 +27,7 @@ const Accordian = () => {
                                 <span>+</span>
                             </div>
                             {dataitem.id === selected ? <div className='content'>{dataitem.answer}</div> : null}
+                            {multiSelected ? <div className='content'>{dataitem.answer}</div> : null}
                         </div>)}
                 </div>
             </div>
