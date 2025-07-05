@@ -1,5 +1,4 @@
-
-.Wrapper{
+.Wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,40 +6,47 @@
   padding: 10px;
 }
 
-.accordian{
+.accordian {
   display: flex;
 
   color: aliceblue;
   width: 100vh;
 }
 
-.item{
+.item {
   width: 100vh;
   height: auto;
-  padding:2% 10%;
+  padding: 2% 10%;
   border: 1px solid black;
-  
+
 }
-.title{
+
+.title {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-
-.item-container{
-  background-color: rgb(164, 62, 82);
+.item-container {
+  background-color: rgb(49, 52, 50);
   border: 2px solid black;
   padding: 10px 15px;
   margin-bottom: 10px;
-  
 }
 
-button{
+.item-container:hover {
+  background-color: rgb(96, 92, 92);
+  transform: scale(102%);
+}
+
+button {
   padding: 15px 30px;
-  background-color: rgb(6, 90, 185);
+  background-color: rgb(44, 121, 58);
   color: aliceblue;
   border-radius: 15px;
+}
+
+button:hover {
+  background-color: rgb(41, 168, 43);
 }
