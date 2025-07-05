@@ -20,9 +20,9 @@ const Accordian = () => {
             <div className='accordian'>
                 
                 <div className='item'>
-                    {data.map((dataitem,index) =>
-                        <div className='item-container'>
-                            <div  key={index} onClick={() => (handleShow(dataitem.id))} className='title'>
+                    {data.map((dataitem) =>
+                        <div className='item-container'  key={dataitem.id} >
+                            <div onClick={() => (handleShow(dataitem.id))} className='title'>
                                 <h3 >{dataitem.question}</h3>
                                 <span>+</span>
                             </div>
